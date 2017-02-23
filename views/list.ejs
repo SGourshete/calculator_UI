@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/
+bootstrap.min.css">
+<% include header %>
+<body>
+  <% data.forEach(function(entry) { %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="text-muted pull-right">
+          <%= ""+entry.split("%")[2] %>
+        </div>
+        <%=entry.split("%")[0] %>
+      </div>
+      <div class="panel-body">
+        <%= entry.split("%")[1] %>
+      </div>
+    </div>
+  <% }) %>
+</body>
+
+<% include footer %>
